@@ -2,16 +2,15 @@
 
 ## 📄Descripción
 
+Funciones flecha.
 
 ## 💻Tecnologías Utilitzadas
 
-- 
+- Javascript
 
 ## 📋Requisitos
 
-
 ## 🛠️Instalación
-
 
 ## ▶️Ejecución
 

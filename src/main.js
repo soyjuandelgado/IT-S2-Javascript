@@ -9,8 +9,21 @@ console.log("Resultado", res);
 
 //RANDOM
 console.log("RANDOM");
-let randomNumber = () => Math.floor(Math.random() * 101);
+//Math.random: aleatorios entre 0 y 1
+//Math.floor: devuelve numeros enteros
+let randomNumber = () => Math.floor(Math.random() * 101); 
 console.log(randomNumber());
 
 // GREET
 console.log("GREET");
+
+class Person{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+
+    greet = () => console.log(`Hola, ${this.nombre}`)
+}
+
+const persona = new Person("Juan");
+persona.greet();
