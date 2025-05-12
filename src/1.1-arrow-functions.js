@@ -27,3 +27,21 @@ class Person{
 
 const persona = new Person("Juan");
 persona.greet();
+
+//Nivel 2
+
+console.log("printNumbers");
+
+function printNumbers(nums) {
+    for (let i = 0; i < nums.length; i++) () => console.log(nums[i]);
+}
+
+let numbers = [3, 5, 7, 4, 2];
+printNumbers(numbers);
+
+//Nivel 3
+
+console.log("setTimeout");
+
+setTimeout( () => console.log("Mensaje retardado.") , 3000 );
+
