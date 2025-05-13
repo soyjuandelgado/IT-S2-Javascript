@@ -26,3 +26,18 @@ function calculadora(n, m, funcion){
 let n = 2;
 let m = 3;
 console.log(`Parametros: ${n}, ${m} - Resultado Calculadora:` + calculadora(n, m, suma));
+
+// Nivel 2
+
+//Ex 3
+
+function saludar(nombre){
+    console.log(`Hola, ${nombre}`);
+}
+
+function esperarISaludar(nombre, funcion){
+    setTimeout(() => funcion(nombre), 2000);
+}
+
+let nombre = "Juan";
+esperarISaludar(nombre, saludar);

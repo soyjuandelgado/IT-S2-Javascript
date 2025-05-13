@@ -66,3 +66,13 @@ function procesarEntradaUsuario(callback) {
 
 procesarEntradaUsuario(saludar);
 ```
+
+## Funcion `setTimeout`
+
+Si se llama a una funcion dentro y no tiene parametros, hay que llamarla sin parentesis porque en el momento de ponerle los parentesis se ejecuta sin esperar.
+
+Si la funcion que se llama lleva parámetros, hay que llamarla con una arrow.
+
+```javascript
+setTimeout( () => console.log("Mensaje retardado.") , 3000 );
+```
