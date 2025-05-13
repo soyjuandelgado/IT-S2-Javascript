@@ -41,3 +41,18 @@ function esperarISaludar(nombre, funcion){
 
 let nombre = "Juan";
 esperarISaludar(nombre, saludar);
+
+// Ex 4
+
+function imprimirElement(element){
+    console.log("Elemento procesado:" + element);
+}
+function processarElements(elements, funcion){
+    for (const element of elements){
+        funcion(element);
+    }
+}
+
+let elements = [1,2,3,4,5]
+
+processarElements(elements, imprimirElement);
