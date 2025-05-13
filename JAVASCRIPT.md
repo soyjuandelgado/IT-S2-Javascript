@@ -132,7 +132,26 @@ numeros.forEach((num) => {
 
 ### Operador Rest `...`
 
+Rest agrupa elementos en una función o destructuración.
 
+```javascript
+function suma(...nums){
+    return nums.reduce( (total, num) => {
+                            return total + num;
+                        }, 0);
+}
+
+let nums = [5, 8, 9];
+console.log(suma(1, 4, 7)); 
+```
+
+#### Desestructurar arrays
+
+```javascript
+const [primero, ...resto] = [10, 20, 30, 40];
+console.log(primero); // 10
+console.log(resto);   // [20, 30, 40]
+```
 
 ### Operador Spread `...`
 
@@ -201,4 +220,67 @@ const sumaTotal = numeros.reduce((total, numero) => {
 }, 0);
 
 console.log("Suma total: ", sumaTotal);
+```
+
+## Objetos
+
+En JavaScript, los **objetos** son estructuras de datos que permiten almacenar pares clave-valor. Son fundamentales para organizar información compleja.
+
+### 📦 Crear un objeto
+
+```js
+const persona = {
+  nombre: "Ana",
+  edad: 30,
+  ciudad: "Madrid"
+};
+```
+
+### 🔍 Acceder a propiedades
+
+```js
+console.log(persona.nombre);  // Ana
+console.log(persona["edad"]); // 30
+```
+
+### ✏️ Modificar propiedades
+
+```js
+persona.edad = 31;
+persona["ciudad"] = "Barcelona";
+```
+
+### ➕ Agregar nuevas propiedades
+
+```js
+persona.profesion = "Ingeniera";
+```
+
+### ❌ Eliminar propiedades
+
+```js
+delete persona.ciudad;
+```
+
+### 🔁 Recorrer propiedades
+
+```js
+for (let clave in persona) {
+  console.log(clave + ": " + persona[clave]);
+}
+```
+
+### 🧩 Métodos en objetos
+
+Los objetos pueden tener funciones como propiedades, llamadas **métodos**:
+
+```js
+const persona = {
+  nombre: "Ana",
+  saludar: function () {
+    console.log("Hola, soy " + this.nombre);
+  }
+};
+
+persona.saludar();  // Hola, soy Ana
 ```
