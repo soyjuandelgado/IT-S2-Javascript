@@ -49,3 +49,20 @@ let resultado = nota >= 90 ? "Excelente" :
                 "Suspendido";
 console.log(resultado); // "Aprobado"
 ```
+
+## Callbacks
+
+Es una función que **se pasa como argumento a otra función** y se ejecuta después de que se complete una operación, o en un momento específico determinado por esa función.
+
+```javascript
+function saludar(nombre) {
+  console.log(`Hola, ${nombre}`);
+}
+
+function procesarEntradaUsuario(callback) {
+  const nombre = "Ana";
+  callback(nombre); // Ejecuta la función pasada como parámetro
+}
+
+procesarEntradaUsuario(saludar);
+```
