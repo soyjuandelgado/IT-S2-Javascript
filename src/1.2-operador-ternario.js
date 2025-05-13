@@ -26,3 +26,18 @@ function trobarMaxim(a, b, c){
 }
 let a = 4, b = 5, c=3;
 console.log(`a:${a}, b:${b}, c:${c} -> El mayor es:${trobarMaxim(a,b,c)}`)
+
+// Nivell 3
+
+function parOImpar(numeros){
+    let es_par = []
+    for (let i = 0; i < numeros.length; i++) {
+        es_par[i] = (numeros[i] % 2 == 0) ? 1 : 0;
+    }
+    return es_par;
+}
+
+numeros = [1,2,3,4,5,6];
+
+console.log(`Array: ${numeros}`);
+console.log(`Array: ${parOImpar(numeros)}`);
