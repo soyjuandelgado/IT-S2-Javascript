@@ -41,3 +41,21 @@ console.log(otros);
 // Nivel 3
 
 // Ex 5
+
+function escribe3(a,b,c){
+    console.log("Primero - " + a);
+    console.log("Segundo - " + b);
+    console.log("Tercero - " + c);
+}
+
+let tres = [1,2,3];
+
+escribe3(...tres);
+
+// Ex 6
+
+const objA = { a:2 };
+const objB = { b:7 };
+const objAB ={ ...objA, ...objB};
+
+console.log(objAB);

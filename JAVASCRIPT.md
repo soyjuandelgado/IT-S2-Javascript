@@ -188,7 +188,7 @@ const updatedUser = { ...user, age: 26 }; // sobrescribe "age"
 
 ### Funcion `.reduce`
 
-Se utiliza para recorrer los elementos de un array, usando una funcion para cada elemento y un acumulador que guarda el resultado. 
+Se utiliza para recorrer los elementos de un array, usando una funcion para cada elemento y un acumulador que guarda el resultado.
 
 El formato es: `array.reduce(funcion, valor inicial)`.
 
