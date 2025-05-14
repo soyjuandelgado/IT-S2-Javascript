@@ -37,3 +37,8 @@ for (num of numeros2){
 
 //Nivel 3
 
+let noms2 = ['Anna', 'Bernat', 'Clara']
+
+for(const [index, nom] of noms.entries()){
+    console.log(`${index}: ${nom}`);
+}

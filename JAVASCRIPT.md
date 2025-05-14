@@ -398,6 +398,18 @@ for (const elemento of iterable) {
 
 Se puede usar `break` para salir del bucle.
 
+#### Funcion `.entries`
+
+Si se necesita el indice del array se puede obtener con la funcion `.entries`.
+
+```javascript
+const frutas = ['manzana', 'banana', 'uva'];
+
+for (const [indice, valor] of frutas.entries()) {
+  console.log(`${indice}: ${valor}`);
+}
+```
+
 ### Bucle `for...in`
 
 Se utiliza para recorrer las propiedades enumerables de un objeto. En lugar de valores como en for...of, este bucle itera sobre las claves (nombres de propiedades).
