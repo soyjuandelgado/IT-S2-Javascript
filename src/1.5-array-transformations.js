@@ -31,7 +31,12 @@ console.log("Sumatorio: " + suma);
 const numeros5 = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9 ];
 const resultado = numeros5.filter( numero => numero >= 10 )         //10, 15, 17, 11, 12
                         .map(numero => numero * 2)                  //20, 30, 34, 22, 24
-                        .reduce((suma, numero) => suma + numero);   //20+30=50+34=84+22=106+26=130
+                        .reduce((suma, numero) => suma + numero, 0);   //20+30=50+34=84+22=106+26=130
 console.log("Operaciones encadenadas: " + resultado);
 
 // Nivel 3
+
+const numeros6 = [11, 12, 13, 14];
+const todos = numeros6.every(numero => numero > 10);
+const alguno = numeros6.some(numero => numero > 10);
+console.log(numeros6 + " Todos>10: " + todos + " Algunos>10: " + alguno);

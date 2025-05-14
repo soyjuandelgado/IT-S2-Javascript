@@ -342,3 +342,23 @@ const numeros4 = [13,7,8,21];
 const suma = numeros4.reduce( (suma, numero) => suma + numero, 0);
 console.log("Sumatorio: " + suma);
 ```
+
+### Funcion `.every`
+
+Devuelve `true` si todos los elementos del array cumplen la condición. Si alguno no la cumple, devuelve `false`.
+
+```javascript
+const edades = [18, 22, 30, 19];
+const todosMayoresDeEdad = edades.every(edad => edad >= 18);
+console.log(todosMayoresDeEdad); // true
+```
+
+### Funcion `.some`
+
+Devuelve `true` si al menos uno de los elementos cumple la condición. Si ninguno la cumple, devuelve `false`.
+
+```javascript
+const edades = [14, 17, 20, 15];
+const hayMayoresDeEdad = edades.some(edad => edad >= 18);
+console.log(hayMayoresDeEdad); // true
+```
