@@ -30,11 +30,11 @@ console.log(`a:${a}, b:${b}, c:${c} -> El mayor es:${trobarMaxim(a,b,c)}`)
 // Nivell 3
 
 function parOImpar(numeros){
-    let es_par = []
+    let esPar = []
     for (let i = 0; i < numeros.length; i++) {
-        es_par[i] = (numeros[i] % 2 == 0) ? 1 : 0;
+        esPpar[i] = (numeros[i] % 2 == 0) ? 1 : 0;
     }
-    return es_par;
+    return esPar;
 }
 
 numeros = [1,2,3,4,5,6];

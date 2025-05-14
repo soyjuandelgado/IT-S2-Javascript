@@ -14,8 +14,8 @@ for (const nom of noms){
 // Ex 3
 
 let numeros = [1, 2, 3, 4, 5, 6];
-let num_pares = numeros.filter(num => num % 2 == 0);
-console.log("Pares: " + num_pares);
+let numPares = numeros.filter(num => num % 2 == 0);
+console.log("Pares: " + numPares);
 
 // Nivel 2
 
@@ -34,3 +34,6 @@ for (num of numeros2){
     if (num == 5)
         break;
 }
+
+//Nivel 3
+

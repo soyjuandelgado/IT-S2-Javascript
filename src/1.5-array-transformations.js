@@ -17,8 +17,8 @@ console.log("Pares: " + pares);
 // Ex 3
 
 const numeros3 = [1,10,8,11];
-const primero_mayor_10 = numeros3.find(numero => numero > 10);
-console.log("Mayor de 10: " + primero_mayor_10);
+const primeroMayor10 = numeros3.find(numero => numero > 10);
+console.log("Mayor de 10: " + primeroMayor10);
 
 // Ex 4
 
