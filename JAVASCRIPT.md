@@ -186,42 +186,6 @@ const user = { name: "Ana", age: 25 };
 const updatedUser = { ...user, age: 26 }; // sobrescribe "age"
 ```
 
-### Funcion `.reduce`
-
-Se utiliza para recorrer los elementos de un array, usando una funcion para cada elemento y un acumulador que guarda el resultado.
-
-El formato es: `array.reduce(funcion, valor inicial)`.
-
-Los parámetros de la funcion son:
-
-- acumulador: variable que guarda el resultado. Es donde va a parar el return de la funcion.
-- elemento: cada uno de los elementos del array.
-- indice(opcional): indice del elemento actual del array.
-- array(opcional): array a tratar.
-
-```javascript
-const numeros= [1, 2, 3, 4, 5];
-
-numeros.reduce((acumulador, elemento, indice, array) => {
-    console.log(`${acumulador}: este es el valor del acumulador en cada iteración`);
-    console.log(`${elemento}: este es el valor del elemento`);
-    console.log(`${indice}: este es el índice del elemento en el array`);
-    console.log(`${array}: este es el array que estamos recorriendo`);
-
-    return acumulador + elemento;
-}, 0);
-
-```
-
-```javascript
-const numeros = [1, 2, 3, 4, 5];
-const sumaTotal = numeros.reduce((total, numero) => {
-     return total + numero;
-}, 0);
-
-console.log("Suma total: ", sumaTotal);
-```
-
 ## Objetos
 
 En JavaScript, los **objetos** son estructuras de datos que permiten almacenar pares clave-valor. Son fundamentales para organizar información compleja.
@@ -283,4 +247,98 @@ const persona = {
 };
 
 persona.saludar();  // Hola, soy Ana
+```
+
+## Transformaciones en Arrays
+
+### Funcion `.map`
+
+Llama a una funcion callback por cada elemento del array y devuelve un array con los resultados.
+
+```javascript
+const numeros = [1,2,3,4];
+//let cuadrados = numeros.map( (elemento, indice, array) => {} );
+let cuadrados = numeros.map( elemento => elemento * elemento );
+
+console.log(cuadrados);
+```
+
+### Funcion `.filter`
+
+Crea un nuevo array con todos los elementos que cumplan una condición especificada por una función.
+
+```javascript
+const nuevoArray = array.filter((elemento, índice, array) => {
+  return condición;
+});
+```
+
+```javascript
+const numeros2 = [1,2,3,4];
+const pares = numeros2.filter(numero => numero % 2 == 0);
+console.log(pares);
+```
+
+### Funcion `.find`
+
+Devuelve el primer elemento que cumple la condicion.
+
+```javascript
+const resultado = array.find((elemento, índice, array) => {
+  return condición;
+});
+```
+
+```javascript
+const numeros3 = [1,10,8,11];
+const primero_mayor_10 = numeros3.find(numero => numero > 10);
+console.log(primero_mayor_10);
+```
+
+### Funcion `.reduce`
+
+Se utiliza para recorrer los elementos de un array, usando una funcion para cada elemento y un acumulador que guarda el resultado.
+
+El formato es: `array.reduce(funcion, valor inicial)`.
+
+```javascript
+const resultado = array.reduce((acumulador, elemento, índice, array) => {
+  return nuevoAcumulador;
+}, valorInicial);
+```
+
+Los parámetros de la funcion son:
+
+- acumulador: variable que guarda el resultado. Es donde va a parar el return de la funcion.
+- elemento: cada uno de los elementos del array.
+- indice(opcional): indice del elemento actual del array.
+- array(opcional): array a tratar.
+
+```javascript
+const numeros= [1, 2, 3, 4, 5];
+
+numeros.reduce((acumulador, elemento, indice, array) => {
+    console.log(`${acumulador}: este es el valor del acumulador en cada iteración`);
+    console.log(`${elemento}: este es el valor del elemento`);
+    console.log(`${indice}: este es el índice del elemento en el array`);
+    console.log(`${array}: este es el array que estamos recorriendo`);
+
+    return acumulador + elemento;
+}, 0);
+
+```
+
+```javascript
+const numeros = [1, 2, 3, 4, 5];
+const sumaTotal = numeros.reduce((total, numero) => {
+     return total + numero;
+}, 0);
+
+console.log("Suma total: ", sumaTotal);
+```
+
+```javascript
+const numeros4 = [13,7,8,21];
+const suma = numeros4.reduce( (suma, numero) => suma + numero, 0);
+console.log("Sumatorio: " + suma);
 ```
