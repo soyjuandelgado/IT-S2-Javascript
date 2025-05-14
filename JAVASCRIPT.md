@@ -362,3 +362,36 @@ const edades = [14, 17, 20, 15];
 const hayMayoresDeEdad = edades.some(edad => edad >= 18);
 console.log(hayMayoresDeEdad); // true
 ```
+
+## Bucles en Arrays
+
+### Bucle `forEach`
+
+```javascript
+array.forEach(function(elemento, indice, array) {
+  // Código a ejecutar por cada elemento
+});
+```
+
+```javascript
+array.forEach((elemento, indice, array) => {
+  // Código a ejecutar por cada elemento
+});
+```
+
+> `indice` y `array` son opcionales.
+
+```javascript
+let noms = ['Anna', 'Bernat', 'Clara'];
+noms.forEach(nom => console.log(nom));
+```
+
+### Bucle `for...of`
+
+Se utiliza para iterar directamente sobre los valores de objetos iterables como arrays, strings, mapas, sets, etc.
+
+```javascript
+for (const elemento of iterable) {
+  // Código a ejecutar con cada elemento
+}
+```

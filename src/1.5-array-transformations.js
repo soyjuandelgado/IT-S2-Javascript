@@ -36,6 +36,8 @@ console.log("Operaciones encadenadas: " + resultado);
 
 // Nivel 3
 
+// Ex 6
+
 const numeros6 = [11, 12, 13, 14];
 const todos = numeros6.every(numero => numero > 10);
 const alguno = numeros6.some(numero => numero > 10);
