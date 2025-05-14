@@ -16,3 +16,21 @@ for (const nom of noms){
 let numeros = [1, 2, 3, 4, 5, 6];
 let num_pares = numeros.filter(num => num % 2 == 0);
 console.log("Pares: " + num_pares);
+
+// Nivel 2
+
+// Ex 4
+
+let obj = { nom: 'Ona', edat: 25, ciutat: 'Barcelona' }; 
+for (const clave in obj){
+    console.log(`Clave: ${clave} Valor: ${obj[clave]}`);
+}
+
+// Ex 5
+
+let numeros2 = [1, 2, 3, 4, 5, 6];
+for (num of numeros2){
+    console.log(num);
+    if (num == 5)
+        break;
+}

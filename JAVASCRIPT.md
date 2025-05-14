@@ -395,3 +395,22 @@ for (const elemento of iterable) {
   // Código a ejecutar con cada elemento
 }
 ```
+
+Se puede usar `break` para salir del bucle.
+
+### Bucle `for...in`
+
+Se utiliza para recorrer las propiedades enumerables de un objeto. En lugar de valores como en for...of, este bucle itera sobre las claves (nombres de propiedades).
+
+```javascript
+for (const clave in objeto) {
+  // Código a ejecutar con cada clave
+}
+```
+
+```javascript
+let obj = { nom: 'Ona', edat: 25, ciutat: 'Barcelona' }; 
+for (const clave in obj){
+    console.log(`Clave: ${clave} Valor: ${obj[clave]}`);
+}
+```
