@@ -36,12 +36,23 @@ promesa2.then( res => console.log("Promesa 2 correcta con texto: " + res) )
 //Ex 4
 
 async function asincrona() {
-    try {
-        let res = await promesa1();
-        console.log("Resultado Asincrona: " + res);
-    } catch (error) {
-        console.log("No ha funcionado - " + error);
-    }
+    let res = await promesa1();
+    console.log("Resultado Asincrona: " + res);
 }
 
 asincrona();
+
+// Nivel 2
+
+// Ex 5
+
+async function asincrona2() {
+    try {
+        let res = await promesa1();
+        console.log("Resultado Asincrona 2: " + res);
+    } catch (error) {
+        console.log("Asincrona 2 no ha funcionado - " + error);
+    }
+}
+
+asincrona2();
