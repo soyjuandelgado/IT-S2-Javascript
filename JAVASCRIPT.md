@@ -426,3 +426,91 @@ for (const clave in obj){
     console.log(`Clave: ${clave} Valor: ${obj[clave]}`);
 }
 ```
+
+## Promesas
+
+Las **Promises** son un mecanismo que permite manejar operaciones asíncronas de una manera más estructurada y comprensible, especialmente cuando se tienen múltiples operaciones que deben ejecutarse de forma secuencial o paralela.
+
+Una **Promise** es un objeto que representa la eventual finalización (o fracaso) de una operación asíncrona. Se puede decir que una **Promise** es un compromiso de que se resolverá con un valor en el futuro, o bien con un error si algo sale mal.
+
+### Estados de una Promise
+
+Una Promise puede estar en uno de estos tres estados:
+
+1. **Pendiente (Pending)**: La operación aún no se ha completado.
+2. **Resuelta (Fulfilled)**: La operación se ha completado correctamente.
+3. **Rechazada (Rejected)**: Hubo un error en la operación.
+
+### Sintaxis básica de una Promise
+
+⚠️ Es obligatorio llamar a las funciones `resolve` y `reject` dentro del código de la promesa.
+
+```javascript
+let miPromise = new Promise((resolve, reject) => {
+  // Simulación de operación asíncrona
+  let exito = true;
+  if (exito) {
+    resolve("Operación exitosa");
+  } else {
+    reject("Hubo un error");
+  }
+});
+
+miPromise
+  .then(result => {
+    console.log(result); // Si la Promise se resuelve
+  })
+  .catch(error => {
+    console.log(error); // Si la Promise es rechazada
+  });
+```
+
+Si hace falta una funcion que devuelva una promesa este sería el formato:
+
+```javascript
+let promesa1 = () => { 
+    return new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            if (true)
+                resolve("Hola, mundo");
+            else
+                reject(new Error("Fallo"));
+        } , 2000);
+    })
+};
+```
+
+### Encadenamiento de Promises
+
+Se pueden encadenar múltiples Promises usando `.then()` para realizar acciones secuenciales.
+
+```javascript
+obtenerDatos()
+  .then(datos => {
+    console.log("Datos obtenidos:", datos);
+    return "Operación siguiente"; // Devuelve una nueva Promise
+  })
+  .then(resultado => {
+    console.log(resultado);
+  })
+  .catch(error => {
+    console.log("Error:", error);
+  });
+```
+
+### Promesas con `async` / `await`
+
+En lugar de usar `.then()` y `.catch()`, podemos usar `async` y `await` para escribir código más limpio y fácil de leer.
+
+```javascript
+async function ejecutar() {
+  try {
+    let datos = await obtenerDatos();
+    console.log("Datos obtenidos:", datos);
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
+
+ejecutar();
+```
