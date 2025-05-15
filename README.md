@@ -1,11 +1,32 @@
 # IT-S2-Javascript
 
+## 🗂️ Tabla de contenidos
+
+- [IT-S2-Javascript](#it-s2-javascript)
+  - [🗂️ Tabla de contenidos](#️-tabla-de-contenidos)
+  - [📄Descripción](#descripción)
+  - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
+  - [📋Requisitos](#requisitos)
+  - [🛠️Instalación](#️instalación)
+  - [▶️Ejecución](#️ejecución)
+  - [🌐Despliegue](#despliegue)
+  - [🤝Contribuciones](#contribuciones)
+
 ## 📄Descripción
 
-Funciones flecha.
+Ejercicios de práctica para los conceptos de:
 
-## 💻Tecnologías Utilitzadas
+1. Funciones flecha.
+2. Operador ternario.
+3. Callbacks.
+4. Operadores rest y spread.
+5. Transformaciones de arrays.
+6. Bucles en arrays.
+7. Promesas, async y await.
 
+## 💻Tecnologías Utilizadas
+
+- HTML
 - Javascript
 
 ## 📋Requisitos
