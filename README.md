@@ -9,8 +9,6 @@
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
   - [▶️Ejecución](#️ejecución)
-  - [🌐Despliegue](#despliegue)
-  - [🤝Contribuciones](#contribuciones)
 
 ## 📄Descripción
 
@@ -31,18 +29,23 @@ Ejercicios de práctica para los conceptos de:
 
 ## 📋Requisitos
 
+- Node.js
+- Entorno de desarrollo (p.e. Visual Studio Code)
+  
 ## 🛠️Instalación
+
+No es necesaria.
 
 ## ▶️Ejecución
 
-1. Visitar la direccion de la web.
+Para cada uno de los apartados, abrir el archivo correspondiente y comprobar la salida en consola.
 
-[Demo en vivo](https://soyjuandelgado.github.io/IT-S1-Maquetacion/)
+Archivos:
 
-## 🌐Despliegue
-
-No aplica.
-
-## 🤝Contribuciones
-
-No aplica.
+- 1.1-arrow-functions.js
+- 1.2-operador-ternario.js
+- 1.3-callbacks.js
+- 1.4-rest-spread-operators.js
+- 1.5-array-transformations.js
+- 1.6-array-loops.js
+- 1.7-promises-async-await.js
