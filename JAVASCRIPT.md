@@ -1,5 +1,47 @@
 # Javascript
 
+- [Javascript](#javascript)
+  - [Funciones flecha](#funciones-flecha)
+  - [Operador ternario](#operador-ternario)
+    - [Operador ternario anidado](#operador-ternario-anidado)
+  - [Callbacks](#callbacks)
+  - [Funcion `setTimeout`](#funcion-settimeout)
+  - [Bucle For](#bucle-for)
+    - [For indexado](#for-indexado)
+    - [For..of](#forof)
+    - [For..in](#forin)
+    - [ForEach](#foreach)
+  - [Rest y Spread](#rest-y-spread)
+    - [Operador Rest `...`](#operador-rest-)
+      - [Desestructurar arrays](#desestructurar-arrays)
+    - [Operador Spread `...`](#operador-spread-)
+  - [Objetos](#objetos)
+    - [📦 Crear un objeto](#-crear-un-objeto)
+    - [🔍 Acceder a propiedades](#-acceder-a-propiedades)
+    - [✏️ Modificar propiedades](#️-modificar-propiedades)
+    - [➕ Agregar nuevas propiedades](#-agregar-nuevas-propiedades)
+    - [❌ Eliminar propiedades](#-eliminar-propiedades)
+    - [🔁 Recorrer propiedades](#-recorrer-propiedades)
+    - [🧩 Métodos en objetos](#-métodos-en-objetos)
+  - [Transformaciones en Arrays](#transformaciones-en-arrays)
+    - [Funcion `.map`](#funcion-map)
+    - [Funcion `.filter`](#funcion-filter)
+    - [Funcion `.find`](#funcion-find)
+    - [Funcion `.reduce`](#funcion-reduce)
+    - [Funcion `.every`](#funcion-every)
+    - [Funcion `.some`](#funcion-some)
+  - [Bucles en Arrays](#bucles-en-arrays)
+    - [Bucle `forEach`](#bucle-foreach)
+    - [Bucle `for...of`](#bucle-forof)
+      - [Funcion `.entries`](#funcion-entries)
+    - [Bucle `for...in`](#bucle-forin)
+  - [Promesas](#promesas)
+    - [Estados de una Promise](#estados-de-una-promise)
+    - [Sintaxis básica de una Promise](#sintaxis-básica-de-una-promise)
+    - [Encadenamiento de Promises](#encadenamiento-de-promises)
+    - [Promesas con `async` / `await`](#promesas-con-async--await)
+    - [Uso de `Promise.all`](#uso-de-promiseall)
+
 ## Funciones flecha
 
 ```javascript
@@ -513,4 +555,19 @@ async function ejecutar() {
 }
 
 ejecutar();
+```
+
+### Uso de `Promise.all`
+
+```javascript
+Promise.all([promise1, promise2, promise3])
+```
+
+```javascript
+const promesa2s = new Promise((resolve) => setTimeout(resolve("Promesa 2seg"), 2000))
+const promesa3s = new Promise((resolve) => setTimeout(resolve("Promesa 3seg"), 3000))
+Promise.all([promesa2s, promesa3s])
+    .then(res => {
+        console.log(res)
+    })
 ```

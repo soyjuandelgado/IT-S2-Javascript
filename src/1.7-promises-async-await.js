@@ -56,3 +56,28 @@ async function asincrona2() {
 }
 
 asincrona2();
+
+// Nivel 3
+
+// Ex 6
+
+const promesa2s = new Promise( (resolve) => {
+    setTimeout(() => {
+        console.log("Dentro promesa 2s")
+        resolve("Promesa 2seg")
+    }, 2000)
+})
+
+//const promesa3s = new Promise((resolve) => setTimeout(resolve("Promesa 3seg"), 3000))
+
+const promesa3s = new Promise( (resolve) => {
+    setTimeout(() => {
+        console.log("Dentro promesa 3s")
+        resolve("Promesa 3seg")
+    }, 3000)
+})
+
+Promise.all([promesa2s, promesa3s])
+    .then(res => {
+        console.log(res)
+    })
