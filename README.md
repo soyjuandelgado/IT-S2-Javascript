@@ -37,7 +37,11 @@ No es necesaria.
 
 ## ▶️Ejecución
 
-Para cada uno de los apartados, abrir el archivo correspondiente y comprobar la salida en consola.
+Para cada uno de los apartados se ha añadido un boton en la web.
+
+1. Abrir web en [GitHub Pages](https://soyjuandelgado.github.io/IT-S2-Javascript/)
+2. Mostrar consola de depuración
+3. Al pulsar cada botón se ejecutará el ejercicio correspondiente.
 
 Archivos:
 
