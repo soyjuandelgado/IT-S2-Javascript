@@ -2,14 +2,14 @@
 const salida = document.getElementById("salida")
 
 console.log("SUMA");
-salida.innerHTML = "SUMA<br>";
+//salida.innerHTML = "SUMA<br>";
 // SUMA
 let a = 3;
 let b = 5;
 let add = (a, b) => a + b; //suma es la funcion, no el retorno de la misma
 let res = add(a,b);
 console.log("Resultado", res);
-salida.innerHTML += `Resultado ${res}<br>`;
+//salida.innerHTML += `Resultado ${res}<br>`;
 
 //RANDOM
 console.log("RANDOM");

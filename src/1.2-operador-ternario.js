@@ -32,7 +32,7 @@ console.log(`a:${a}, b:${b}, c:${c} -> El mayor es:${trobarMaxim(a,b,c)}`)
 function parOImpar(numeros){
     let esPar = []
     for (let i = 0; i < numeros.length; i++) {
-        esPpar[i] = (numeros[i] % 2 == 0) ? 1 : 0;
+        esPar[i] = (numeros[i] % 2 == 0) ? 1 : 0;
     }
     return esPar;
 }
