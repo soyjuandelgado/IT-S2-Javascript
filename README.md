@@ -29,7 +29,7 @@ Ejercicios de práctica para los conceptos de:
 
 ## 📋Requisitos
 
-- Entorno de desarrollo (p.e. Visual Studio Code)
+- Navegador web
   
 ## 🛠️Instalación
 
