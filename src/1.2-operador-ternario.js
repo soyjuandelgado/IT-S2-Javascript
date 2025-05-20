@@ -32,12 +32,12 @@ function operadorTernario(){
     // Nivell 3
 
     function parOImpar(numeros){
-        let esPar = []
-        for (let i = 0; i < numeros.length; i++) {
+        let esPar = numeros.map(num => (num % 2 == 0) ? 1 : 0)
+/*         for (let i = 0; i < numeros.length; i++) {
             esPar[i] = (numeros[i] % 2 == 0) ? 1 : 0;
-        }
+        }*/
         return esPar;
-    }
+     }
 
     numeros = [1,2,3,4,5,6];
 
