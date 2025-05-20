@@ -1,83 +1,85 @@
-// Nivel 1
+function promisesAsyncAwait(){    
+    // Nivel 1
 
-// Ex 1
+    // Ex 1
 
-let promesa1 = () => { 
-    return new Promise( (resolve, reject) => {
-        setTimeout( () => {
-            if (true)
-                resolve("Hola, món");
-            else
-                reject(new Error("Fallo"));
-        } , 2000);
-    })
-};
+    let promesa1 = () => { 
+        return new Promise( (resolve, reject) => {
+            setTimeout( () => {
+                if (true)
+                    resolve("Hola, món");
+                else
+                    reject(new Error("Fallo"));
+            } , 2000);
+        })
+    };
 
-// Ex 2
+    // Ex 2
 
-promesa1().then( res => console.log(`Resultado promesa 1: ${res}`) );
+    promesa1().then( res => console.log(`Resultado promesa 1: ${res}`) );
 
-// Ex 3
+    // Ex 3
 
-let promesa2 = (input) => { 
-    return new Promise( (resolve, reject) => {
-        //let input = prompt("Introduce un texto");
-        setTimeout( () =>{
-            if (input=="Hola")
-                resolve(input);
-            else
-                reject(new Error("El texto introducido no es 'Hola'."));
-        }, 2000);
-    });
-};
+    let promesa2 = (input) => { 
+        return new Promise( (resolve, reject) => {
+            //let input = prompt("Introduce un texto");
+            setTimeout( () =>{
+                if (input=="Hola")
+                    resolve(input);
+                else
+                    reject(new Error("El texto introducido no es 'Hola'."));
+            }, 2000);
+        });
+    };
 
-promesa2("Hola").then( res => console.log("Promesa 2 correcta con texto: " + res) )
-    .catch( error => console.log("Promesa 2 con error: " + error));
+    promesa2("Hola").then( res => console.log("Promesa 2 correcta con texto: " + res) )
+        .catch( error => console.log("Promesa 2 con error: " + error));
 
-//Ex 4
+    //Ex 4
 
-async function asincrona() {
-    let res = await promesa1();
-    console.log("Resultado Asincrona: " + res);
-}
-
-asincrona();
-
-// Nivel 2
-
-// Ex 5
-
-async function asincrona2() {
-    try {
+    async function asincrona() {
         let res = await promesa1();
-        console.log("Resultado Asincrona 2: " + res);
-    } catch (error) {
-        console.log("Asincrona 2 no ha funcionado - " + error);
+        console.log("Resultado Asincrona: " + res);
     }
-}
 
-asincrona2();
+    asincrona();
 
-// Nivel 3
+    // Nivel 2
 
-// Ex 6
+    // Ex 5
 
-const promesa2s = new Promise( (resolve) => {
-    setTimeout(() => {
-        console.log("Dentro promesa 2s")
-        resolve("Promesa 2seg")
-    }, 2000)
-})
+    async function asincrona2() {
+        try {
+            let res = await promesa1();
+            console.log("Resultado Asincrona 2: " + res);
+        } catch (error) {
+            console.log("Asincrona 2 no ha funcionado - " + error);
+        }
+    }
 
-const promesa3s = new Promise( (resolve) => {
-    setTimeout(() => {
-        console.log("Dentro promesa 3s")
-        resolve("Promesa 3seg")
-    }, 3000)
-})
-//const promesa3s = new Promise((resolve) => setTimeout(resolve("Promesa 3seg"), 3000))
+    asincrona2();
 
-Promise.all([promesa2s, promesa3s])
-    .then(res => {
-        console.log(res)
+    // Nivel 3
+
+    // Ex 6
+
+    const promesa2s = new Promise( (resolve) => {
+        setTimeout(() => {
+            console.log("Dentro promesa 2s")
+            resolve("Promesa 2seg")
+        }, 2000)
     })
+
+    const promesa3s = new Promise( (resolve) => {
+        setTimeout(() => {
+            console.log("Dentro promesa 3s")
+            resolve("Promesa 3seg")
+        }, 3000)
+    })
+    //const promesa3s = new Promise((resolve) => setTimeout(resolve("Promesa 3seg"), 3000))
+
+    Promise.all([promesa2s, promesa3s])
+        .then(res => {
+            console.log(res)
+        })
+    }

@@ -29,7 +29,6 @@ Ejercicios de práctica para los conceptos de:
 
 ## 📋Requisitos
 
-- Node.js
 - Entorno de desarrollo (p.e. Visual Studio Code)
   
 ## 🛠️Instalación
