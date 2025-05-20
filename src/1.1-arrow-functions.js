@@ -42,9 +42,9 @@ function arrowFunctions(){
     salida.innerHTML += "printNumbers<br>";
 
     function printNumbers(nums) {
-        for (let i = 0; i < nums.length; i++) () => {console.log(nums[i]);
-                                                salida.innerHTML += nums[i] + "<br>";
-        };
+        nums.map(num => {console.log(num);
+                        salida.innerHTML += num + "<br>";
+                    })
     }
 
     let numbers = [3, 5, 7, 4, 2];
